@@ -22,7 +22,7 @@ void setup() {
 void draw()
 {
 
-  background(#AEE2FA);
+  background(0);
 
   noStroke();
 
@@ -47,6 +47,7 @@ void draw()
 
 
   // ALINEAR LOS CORALES CONFORME SALGAN 
+  
   float angle = atan2(PosY-coral[closestIndex].y, PosX-coral[closestIndex].x);
   //ATAN2 calcula el ángulo (en radianes) desde un punto especificado hasta el origen de las coordenadas
 
@@ -58,10 +59,10 @@ void draw()
   // DIBUJAR CORALES
   for (int i=0; i < coral.length; i++) {
 
-    fill(0, 0, 255,50);
+    fill(0, 0, 255,100);
     ellipse( coral[i].y, coral[i].x, coral[i].z*3, coral[i].z*3);
-    fill(231,255,139,100);
-    ellipse( coral[i].y, coral[i].x, coral[i].z*0.8, coral[i].z*0.8);
+    //fill(231,255,139,100);
+    //ellipse( coral[i].y, coral[i].x, coral[i].z*0.8, coral[i].z*0.8);
     /*fill(random(100,200),random(0,200),200);
     ellipse( coral[i].y, coral[i].x, coral[i].z*2, coral[i].z*2);*/
     fill(255,81,46,200);
