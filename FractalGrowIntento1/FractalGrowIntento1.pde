@@ -13,8 +13,8 @@ void setup() {
 
   while (coral.length< 5) //controla cuantos corales se forman 
   {
-    coral = (PVector []) append(coral, new PVector (400,400, random (minRadio, maxRadio)));
-    //append son los datos devueltos por la función que se deben convertir al tipo de datos de la matriz de objetos (array)
+    coral = (PVector []) append(coral, new PVector (400,400, random (minRadio, maxRadio))); //si ponemos random en width y height se dibujan por todos lados 
+    //append son los datos devueltos por la función que se deben convertir al tipo de datos de la matriz de objetos (array o char)
   }
 }
 
