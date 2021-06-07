@@ -13,7 +13,7 @@ void setup() {
 
   while (coral.length< 5) //controla cuantos corales se forman 
   {
-    coral = (PVector []) append(coral, new PVector (random (width), random (height), random (minRad, maxRad)));
+    coral = (PVector []) append(coral, new PVector (400,400, random (minRad, maxRad)));
   }
 }
 
@@ -24,7 +24,6 @@ void draw()
   background(255);
 
   noStroke();
-  fill(random(150,255),random(0,150),100);
 
   float newRad = random(minRad, maxRad);
   float newX = random(newRad, width-newRad);
@@ -34,7 +33,7 @@ void draw()
   float closestDist = 100000000;
   int closestIndex = 0;
   float distance;
-  
+
   // DISTANCIA ENTRE BOLITAS 
   for (int i=0; i <coral.length; i++) 
   {
@@ -56,13 +55,23 @@ void draw()
   coral = (PVector []) append (coral, new PVector (newX, newY, newRad));
 
   // DIBUJAR BOLITAS
-  for (int i=0 ; i < coral.length; i++) {
+  for (int i=0; i < coral.length; i++) {
 
+    fill(0, 0, 255, 200);
     ellipse( coral[i].x, coral[i].y, coral[i].z*2, coral[i].z*2);
+    fill(0,255,0,200);
+    ellipse( coral[i].y, coral[i].x, coral[i].z*2, coral[i].z*2);
   }
 }
 
-void mousePressed ()
-{
-  setup();
+void keyPressed() { //hit the "s" key and save my image
+  if (key=='s'||key=='S')
+
+  {
+    saveFrame();
+  }
+}
+
+void saveFrame() {
+  saveFrame("images/coral-###.png"); //when running on the web it will put the PNG in a new browser tab
 }
