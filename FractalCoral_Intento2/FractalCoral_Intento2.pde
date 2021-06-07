@@ -13,15 +13,15 @@ void setup() {
     elCoral[i] = new Coral();
   }
 
-  PVector arribaizq = new PVector(425, 200); //donde comienza el coral
+  PVector arribaizq = new PVector(425, 425); //donde comienza el coral
   elCoral[1].position.set(arribaizq);
   elCoral[1].coralseed  = true;
 
-  PVector vertical = new PVector(425, 200);
+  PVector vertical = new PVector(425, 125);
   elCoral[2].position.set(vertical);
   elCoral[2].coralseed  = true;
 
-  PVector abajoizq = new PVector(425, 200);
+  PVector abajoizq = new PVector(425, 375);
   elCoral[3].position.set(abajoizq);
   elCoral[3].coralseed  = true;
 
@@ -47,11 +47,11 @@ void draw() {
         if (elCoral[j].coralseed == true) {
 
           s = PVector.dist(elCoral[i].position, elCoral[j].position); //distancia entre bolitas
-          if (s <= 15) { //velocidad
+          if (s <= 10) { //velocidad
             elCoral[i].coralseed=true;
 
-            stroke(random(150,255),random(0,150),0);//color coral (148, 255, 116, 100)
-            strokeWeight (2); //tamño bolitas coral
+            stroke(random(150,255),random(0,150),50);//color coral (148, 255, 116, 100)
+            strokeWeight (15); //tamño bolitas coral
             line (elCoral[i].position.x, elCoral[i].position.y, elCoral[j].position.x, elCoral[j].position.y);
           }
         }
@@ -66,11 +66,11 @@ void draw() {
         if (elCoral[j].coralseed == true) {
 
           s = PVector.dist(elCoral[i].position, elCoral[j].position); //distancia entre bolitas
-          if (s <= 15) { //velocidad
+          if (s <= 13) { //velocidad
             elCoral[i].coralseed=true;
 
-            stroke(0, 255, 0, 100); //color coral (148, 255, 116, 100)
-            strokeWeight (10); //tamño bolitas coral
+            stroke(255, 0, 0, 100); //color coral (148, 255, 116, 100)
+            strokeWeight (15); //tamño bolitas coral
             line (elCoral[i].position.x, elCoral[i].position.y, elCoral[j].position.x, elCoral[j].position.y);
           }
         }
@@ -85,7 +85,7 @@ void draw() {
         if (elCoral[j].coralseed == true) {
 
           s = PVector.dist(elCoral[i].position, elCoral[j].position); //distancia entre bolitas
-          if (s <= 15) { //velocidad
+          if (s <= 11) { //velocidad
             elCoral[i].coralseed=true;
 
             stroke(0, 0, 255, 100);//color coral (148, 255, 116, 100)
