@@ -22,7 +22,7 @@ void setup() {
 void draw()
 {
 
-  background(255);
+  background(#AEE2FA);
 
   noStroke();
 
@@ -58,12 +58,15 @@ void draw()
   // DIBUJAR CORALES
   for (int i=0; i < coral.length; i++) {
 
-    fill(0, 0, 255, 100);
-    ellipse( coral[i].y, coral[i].x, coral[i].z*2, coral[i].z*2);
-    fill(random(255,255),random(0,150),200);
-    ellipse( coral[i].x, coral[i].y, coral[i].z*2, coral[i].z*2);
-    fill(255,0,0,200);
+    fill(0, 0, 255,50);
+    ellipse( coral[i].y, coral[i].x, coral[i].z*3, coral[i].z*3);
+    fill(231,255,139,100);
+    ellipse( coral[i].y, coral[i].x, coral[i].z*0.8, coral[i].z*0.8);
+    /*fill(random(100,200),random(0,200),200);
+    ellipse( coral[i].y, coral[i].x, coral[i].z*2, coral[i].z*2);*/
+    fill(255,81,46,200);
     ellipse( coral[i].x, coral[i].y, coral[i].z*1, coral[i].z*1);
+    
   }
 }
 

@@ -13,8 +13,8 @@ void setup() {
     elCoral[i] = new Coral();
   }
 
-  PVector arribaizq = new PVector(425, 425); //donde comienza el coral
-  elCoral[1].position.set(arribaizq);
+  PVector arriba = new PVector(425, 425); //donde comienza el coral
+  elCoral[1].position.set(arriba);
   elCoral[1].coralseed  = true;
 
   PVector vertical = new PVector(425, 425);
